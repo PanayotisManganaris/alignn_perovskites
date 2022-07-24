@@ -15,11 +15,36 @@
 #+SETUPFILE: ~/org/mrg_beamer_header.org
 #+INCLUDE: ~/org/mrg_beamer_frontmatter.org
 * GNNs Overview
-** 
+** Graph Networks are General                                      :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+- framework accepts complicated data structures
+  - handles arbitrary dependencies between elements of input
+  - handles
+  - 
+- 
+* ALIGNN in GANs 
+** Generative Adversarial Neural Networks                          :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+*** Reinforcement Learning Applications
+- A neural network is the reward function
+  - in pure GANs, both networks learn from each other
+- create adversary to generate materials for ALIGNN predictions
+
+** Applications to Materials Design
 * ALIGNN Performance on Perovskites Data
 ** pre-trained
+
 ** training
 requires GPU resources -- can't do this on time
 * Questions about ALIGNN
-** Experiment v Prediction Parity
-- how can we give ALIGNN features that are easy to obtain for experimental measurements?
+** Experiment v Prediction Parity                                  :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+*** Validating ALIGNN
+- Input features easy to obtain for experimental measurements?
+*** 
