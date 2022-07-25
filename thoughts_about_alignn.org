@@ -19,25 +19,31 @@
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
-
-** Graph Networks are General                                      :B_frame:
+- graph kernels
+- random-walks
+- gnns
+** Graphs Networks are General                                     :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
 - framework accepts complicated data structures
   - handles arbitrary dependencies between elements of input set
-  - handles
   - 
+- 
 ** I Compare GNN Implementations                                   :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
+# my evaluation, as a third party, of two dominant code bases
 *** col                                                             :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.5
 :END:
 **** MEGnet 
 - leverages Materials Project infrastructure
+  - suite of structure manipulation algorithms
+  - flexible IO
+- integrates well with high-throughput simulation workflows
 *** col                                                             :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.5
@@ -46,7 +52,7 @@
 - much more accessible code-base
   - more familiar core dependencies
   - more extensible
-* Questions about Crystal Graphs
+* COMMENT Questions about Crystal Graphs
 ** Atomistic Graph                                                 :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
@@ -59,8 +65,9 @@
 :END:
 - is this generated from the atomistic graph as an input?
 - is this created within the network?
-** Comparison to other crystalgraph implmentations
-- Materials Project's MEGnet uses some kind of crystal graph too.
+** Comparison to other crystal graph implementations
+- MEGnet's CrystalGraph
+- built from a neighbors list computed from a pmg structure object
 * ALIGNN Performance on Perovskites Data
 ** pre-trained
 
