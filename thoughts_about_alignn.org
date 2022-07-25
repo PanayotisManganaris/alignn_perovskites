@@ -15,9 +15,21 @@
 #+SETUPFILE: ~/org/mrg_beamer_header.org
 #+INCLUDE: ~/org/mrg_beamer_frontmatter.org
 * GNNs
-** COMMENT ML on Graphs                                                    :B_frame:
+** COMMENT ML with Graphs                                          :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
+:END:
+*** algorithm requirements                                        :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+- node equivariant
+- scalable
+  - in many cases graphs are sparse
+  - in crystals, graphs are not sparse
+*** ML architectures for purpose                                  :B_block:
+:PROPERTIES:
+:BEAMER_env: block
 :END:
 - graph kernels
 - random-walks
@@ -26,9 +38,10 @@
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
+# explain how graph networks acheive ML on graph requirements
 - framework accepts complicated data structures
-  - handles arbitrary dependencies between elements of input set
-  - 
+  - process arbitrary dependencies between elements of input set
+  - relate features of nodes and features of connections
 - 
 ** I Compare GNN Implementations                                   :B_frame:
 :PROPERTIES:
@@ -44,6 +57,7 @@
   - suite of structure manipulation algorithms
   - flexible IO
 - integrates well with high-throughput simulation workflows
+- data structure enables global feature definitions
 *** col                                                             :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.5
@@ -78,9 +92,16 @@ requires GPU resources -- can't do this on time
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
-*** Validating ALIGNN
-- Input features easy to obtain for experimental measurements?
-*** 
+*** Validating ALIGNN                                             :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+- input features easy to obtain for experimental measurements?
+*** ALIGNN Scalability                                            :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+- crystal graph edge count increases exponentially with crystal size?
 * GANs 
 ** Generative Adversarial Neural Networks                          :B_frame:
 :PROPERTIES:
