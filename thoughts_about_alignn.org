@@ -80,6 +80,7 @@ graph convolution illustrated[fn:4]
   - flexible IO
 - integrates well with high-throughput simulation workflows
 - data structure enables global feature definitions
+- graph in \rightarrow graph out?
 *** col                                                             :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.5
@@ -90,6 +91,7 @@ graph convolution illustrated[fn:4]
 - much more accessible code-base
   - more familiar core dependencies
   - more extensible
+- graph in \rightarrow anything out?
 * COMMENT Questions about Crystal Graphs
 # i'm better off reading the source code
 ** Atomistic Graph                                                 :B_frame:
@@ -108,7 +110,8 @@ graph convolution illustrated[fn:4]
 - built from a neighbors list computed from a pmg structure object
 * ALIGNN Performance on Perovskites Data
 # bad figures, but improvements to come
-** Test Predictions                                                :B_frame:
+# is align training very GPU dependent?
+** Test Band Gap Predictions                                       :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
@@ -151,24 +154,36 @@ JARVIS b88vdw band gap model on Perovskite HSE calculations
 :PROPERTIES:
 :BEAMER_env: block
 :END:
-- ALIGNN is not competing on the Matbench suite?
+- ALIGNN Competes mostly with MODNet in matbench suite, not MEGnet, anymore.
+- I don't know much about MODNet
 * GANs 
 ** Generative Adversarial Neural Networks                          :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
-*** Reinforcement Learning Applications                           :B_block:
+*** col                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+**** Reinforcement Learning Applications                         :B_block:
 :PROPERTIES:
 :BEAMER_env: block
 :END:
 - one neural network is the reward function of another
   - in pure GANs, both networks learn from each other
 - many correct answers
-*** img                                                   :B_ignoreheading:
+*** col                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+**** img                                                 :B_ignoreheading:
 :PROPERTIES:
 :BEAMER_env: ignoreheading
 :END:
 Design of Perovskites attempted by MATGANIP[fn:3]
+#+DOWNLOADED: screenshot @ 2022-07-25 21:32:33
+#+attr_latex: :width 165
+[[file:GANs/2022-07-25_21-32-33_screenshot.png]]
 
 ** ALIGNN for Materials Design                                     :B_frame:
 :PROPERTIES:
@@ -182,8 +197,8 @@ Design of Perovskites attempted by MATGANIP[fn:3]
 :BEAMER_env: block
 :END:
 create adversary to generate materials for ALIGNN predictions
-- creating a generator adversary
-- ALIGNN as a discriminator?
+- creating a complimentary generator
+  - ALIGNN as a discriminator?
 - encoder/generator paradigm with ALIGNN as encoder
 - "BiGAN" encoder-generator may extend adversary to consider
   additional constraints in material generation.
