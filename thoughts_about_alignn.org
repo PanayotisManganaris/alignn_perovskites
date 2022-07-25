@@ -14,8 +14,8 @@
 #+cite_export:
 #+SETUPFILE: ~/org/mrg_beamer_header.org
 #+INCLUDE: ~/org/mrg_beamer_frontmatter.org
-* GNNs
-** COMMENT ML with Graphs                                          :B_frame:
+* GNNs Background
+** COMMENT ML with Graphs                                                  :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
@@ -39,6 +39,10 @@
 :BEAMER_env: frame
 :END:
 # explain how graph networks achieve ML on graph requirements
+*** col                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
 - framework accepts complicated data structures
   - process arbitrary dependencies between elements of input set
 - can relate features of nodes and features of connections in many ways
@@ -46,6 +50,19 @@
   - attention
   - sampling and aggregation (SAGE)
   - isomorphism
+*** col                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+#+DOWNLOADED: screenshot @ 2022-07-25 17:37:18
+#+attr_latex: :width 180
+[[file:GNNs/2022-07-25_17-37-18_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2022-07-25 17:38:06
+#+attr_latex: :width 180
+[[file:GNNs/2022-07-25_17-38-06_screenshot.png]]
+
+graph convolution illustrated[fn:4]
 
 ** I Compare GNN Implementations                                   :B_frame:
 :PROPERTIES:
@@ -96,7 +113,9 @@
 :END:
 
 ** training
-requires GPU resources -- can't do this on time
+requires GPU resources
+- I'll start trying some of this on Gilbreth
+- building our database will accelerate this process
 * Questions about ALIGNN
 ** Questions
 *** Prediction Validity v Experiment                              :B_block:
@@ -168,7 +187,7 @@ consistency regularization to promote clustering in latent space[fn:1]
 Data Augmentation (DA) via structure mutation[fn:2]
 
 * Footnotes
-
+[fn:4][[cite:&daigavane-2021-under-convol-graph]] 
 [fn:3][[cite:&hu-2019-matgan]] 
 [fn:2][[cite:&zhao-2020-image-augmen]] 
 [fn:1][[cite:&zhang-2019-consis-regul]] 
