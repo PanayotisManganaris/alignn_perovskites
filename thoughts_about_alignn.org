@@ -15,6 +15,7 @@
 #+SETUPFILE: ~/org/mrg_beamer_header.org
 #+INCLUDE: ~/org/mrg_beamer_frontmatter.org
 * GNNs Background
+# for this company, only last slide is worth dwelling on
 ** COMMENT ML with Graphs                                                  :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
@@ -64,7 +65,7 @@
 
 graph convolution illustrated[fn:4]
 
-** I Compare GNN Implementations                                   :B_frame:
+** My Reading of GNN Implementations                               :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
@@ -107,17 +108,34 @@ graph convolution illustrated[fn:4]
 - built from a neighbors list computed from a pmg structure object
 * ALIGNN Performance on Perovskites Data
 # bad figures, but improvements to come
-** test prediction                                                 :B_frame:
+** Test Predictions                                                :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
+#+attr_latex: :width 250
+file:~/Pictures/ALIGNN_perovs_pred/HSE_v_jvb88vdw.png
 
-** training
-requires GPU resources
-- I'll start trying some of this on Gilbreth
-- building our database will accelerate this process
+JARVIS b88vdw band gap model on Perovskite HSE calculations
+
+** Training Status                                                 :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+*** GPU resources                                                 :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+- start using Gilbreth cluster to perform training
+*** Perovskites data                                              :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+- WIP NoSQL database for managing workflows and results
 * Questions about ALIGNN
-** Questions
+** Questions                                                       :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
 *** Prediction Validity v Experiment                              :B_block:
 :PROPERTIES:
 :BEAMER_env: block
@@ -170,22 +188,27 @@ create adversary to generate materials for ALIGNN predictions
 - "BiGAN" encoder-generator may extend adversary to consider
   additional constraints in material generation.
   - a type of auto-encoder
-*** implementation details                                :B_ignoreheading:
+*** Training Considerations                                       :B_block:
 :PROPERTIES:
-:BEAMER_env: ignoreheading
+:BEAMER_env: block
 :END:
 #+DOWNLOADED: screenshot @ 2022-07-25 16:25:00
-#+attr_latex: :width 250
+#+attr_latex: :width 300
 [[file:GANs/2022-07-25_16-25-00_screenshot.png]]
 
 consistency regularization to promote clustering in latent space[fn:1]
 
+*** Training Considerations                                       :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
 #+DOWNLOADED: screenshot @ 2022-07-25 16:32:52
-#+attr_latex: :width 250
+#+attr_latex: :width 300
 [[file:GANs/2022-07-25_16-32-52_screenshot.png]]
 
 Data Augmentation (DA) via structure mutation[fn:2]
-
+* 
+[[printbibliography:]]
 * Footnotes
 [fn:4][[cite:&daigavane-2021-under-convol-graph]] 
 [fn:3][[cite:&hu-2019-matgan]] 
