@@ -24,17 +24,6 @@
   - handles
   - 
 - 
-* ALIGNN in GANs 
-** Generative Adversarial Neural Networks                          :B_frame:
-:PROPERTIES:
-:BEAMER_env: frame
-:END:
-*** Reinforcement Learning Applications
-- A neural network is the reward function
-  - in pure GANs, both networks learn from each other
-- create adversary to generate materials for ALIGNN predictions
-
-** Applications to Materials Design
 * ALIGNN Performance on Perovskites Data
 ** pre-trained
 
@@ -48,3 +37,32 @@ requires GPU resources -- can't do this on time
 *** Validating ALIGNN
 - Input features easy to obtain for experimental measurements?
 *** 
+* GANs 
+** Generative Adversarial Neural Networks                          :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+*** Reinforcement Learning Applications                           :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+- one neural network is the reward function of another
+  - in pure GANs, both networks learn from each other
+*** ig                                                    :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+
+** Applications to Materials Design                                :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+*** ALIGNN Design Generator                                       :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+create adversary to generate materials for ALIGNN predictions
+- first, encoder/generator paradigm
+- second, "BiGAN" encoder-generator may extend designer to consider
+  fabrication constraints.
+  - a type of auto-encoder
