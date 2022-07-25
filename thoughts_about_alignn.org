@@ -41,9 +41,11 @@
 # explain how graph networks achieve ML on graph requirements
 - framework accepts complicated data structures
   - process arbitrary dependencies between elements of input set
-  - relate features of nodes and features of connections
-    - local convolution
-    - attention
+- can relate features of nodes and features of connections in many ways
+  - local convolution
+  - attention
+  - sampling and aggregation (SAGE)
+  - isomorphism
 
 ** I Compare GNN Implementations                                   :B_frame:
 :PROPERTIES:
@@ -65,16 +67,18 @@
 :BEAMER_col: 0.5
 :END:
 **** ALIGNN
+- very nice piece of software
+- easy to use and distribute
 - much more accessible code-base
   - more familiar core dependencies
   - more extensible
 * COMMENT Questions about Crystal Graphs
+# i'm better off reading the source code
 ** Atomistic Graph                                                 :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
 - how is this generated from POSCAR?
-*** Properties of Data Structure
 ** Atomistic Line Graph                                            :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
@@ -85,21 +89,32 @@
 - MEGnet's CrystalGraph
 - built from a neighbors list computed from a pmg structure object
 * ALIGNN Performance on Perovskites Data
-** pre-trained
+# bad figures, but improvements to come
+** test prediction                                                 :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
 
 ** training
 requires GPU resources -- can't do this on time
 * Questions about ALIGNN
-** Prediction Validity v Experiment                                :B_frame:
+** Questions
+*** Prediction Validity v Experiment                              :B_block:
 :PROPERTIES:
-:BEAMER_env: frame
+:BEAMER_env: block
 :END:
 - input features easy to obtain for experimental measurements?
-** ALIGNN Scalability                                              :B_block:
+*** ALIGNN Scalability                                            :B_block:
 :PROPERTIES:
 :BEAMER_env: block
 :END:
 - crystal graph edge count increases exponentially with crystal size?
+- how is periodicity encoded in graph?
+*** Bench marking                                                 :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+- ALIGNN is not competing on the Matbench suite?
 * GANs 
 ** Generative Adversarial Neural Networks                          :B_frame:
 :PROPERTIES:
@@ -117,6 +132,7 @@ requires GPU resources -- can't do this on time
 :BEAMER_env: ignoreheading
 :END:
 Design of Perovskites attempted by MATGANIP[fn:3]
+
 ** ALIGNN for Materials Design                                     :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
