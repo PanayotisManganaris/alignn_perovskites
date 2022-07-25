@@ -14,16 +14,53 @@
 #+cite_export:
 #+SETUPFILE: ~/org/mrg_beamer_header.org
 #+INCLUDE: ~/org/mrg_beamer_frontmatter.org
-* GNNs Overview
+* GNNs
+** COMMENT ML on Graphs                                                    :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+
 ** Graph Networks are General                                      :B_frame:
 :PROPERTIES:
 :BEAMER_env: frame
 :END:
 - framework accepts complicated data structures
-  - handles arbitrary dependencies between elements of input
+  - handles arbitrary dependencies between elements of input set
   - handles
   - 
-- 
+** I Compare GNN Implementations                                   :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+*** col                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+**** MEGnet 
+- leverages Materials Project infrastructure
+*** col                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+**** ALIGNN
+- much more accessible code-base
+  - more familiar core dependencies
+  - more extensible
+* Questions about Crystal Graphs
+** Atomistic Graph                                                 :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+- how is this generated from POSCAR?
+*** Properties of Data Structure
+** Atomistic Line Graph                                            :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:
+- is this generated from the atomistic graph as an input?
+- is this created within the network?
+** Comparison to other crystalgraph implmentations
+- Materials Project's MEGnet uses some kind of crystal graph too.
 * ALIGNN Performance on Perovskites Data
 ** pre-trained
 
